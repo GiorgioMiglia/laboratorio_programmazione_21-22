@@ -1,4 +1,6 @@
-# laboratorio_programmazione_21-22
-Esercizi di laboratorio
-Corso di Programmazione e Laboratorio UniUd 2021-2022
-1 anno
+# Esercizi laboratorio di Programmazione
+### Corso di Programmazione UniUD 21-22 Primo anno
+
+Raccolta dei vari esercizi svolti durante le ore di laboratorio.  
+
+Per qualsiasi cosa Telegram: **@jagaaa1**
