@@ -63,7 +63,6 @@
                         (/
                             (bin-dec (string-append (parte_intera str) (parte_fraz str)))
                             (expt 2 (string-length (parte_fraz str)))
-                        
                         )
                     
                     )
