@@ -58,9 +58,31 @@
 ; e dividendolo successivamente per una potenza di 2 con all'esponente il numero di cifre dopo la virgola 
 ; es. 10.1 bin = 2.5 dec --> 10.1 bin = 101 bin / 2^1 = 5/2 = 2.5 dec
             (cond ; (exact->inexact) trasforma una frazione in numero con virgola es. 5/2 -> 2.5
-                ((string=? (substring str 0 1) "+") (exact->inexact(/ (bin-dec (string-append (parte_intera str) (parte_fraz str))) (expt 2 (string-length (parte_fraz str))))))
-                ((string=? (substring str 0 1) "-") (exact->inexact(* (/ (bin-dec (string-append (parte_intera str) (parte_fraz str))) (expt 2 (string-length (parte_fraz str)))) -1)))
-                (else (exact->inexact(/ (bin-dec (string-append (parte_intera str) (parte_fraz str))) (expt 2 (string-length (parte_fraz str))))))
+                ((string=? (substring str 0 1) "+")
+                    (exact->inexact
+                        (/
+                            (bin-dec (string-append (parte_intera str) (parte_fraz str)))
+                            (expt 2 (string-length (parte_fraz str)))
+                        
+                        )
+                    
+                    )
+                )
+                ((string=? (substring str 0 1) "-")
+                    (exact->inexact
+                        (* (/
+                                (bin-dec (string-append (parte_intera str) (parte_fraz str)))
+                                (expt 2 (string-length (parte_fraz str)))
+                            ) -1)
+                    )
+                )
+                (else (exact->inexact
+                            (/
+                                (bin-dec (string-append (parte_intera str) (parte_fraz str)))
+                                (expt 2 (string-length (parte_fraz str)))
+                            )
+                        )
+                )
             )
             (cond ; se nella stringa passata non è presente la virgola si converte normalmente (togliendo solo il + o -)
                 ((string=? (substring str 0 1) "+") (bin-dec (substring str 1)))

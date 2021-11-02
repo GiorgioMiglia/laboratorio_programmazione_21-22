@@ -66,10 +66,11 @@
 ; es. 10.1 bin = 2.5 dec --> 10.1 bin = 101 bin / 2^1 = 5/2 = 2.5 dec
             (cond ; (exact->inexact) trasforma una frazione in numero con virgola es. 5/2 -> 2.5
                 ((string=? (substring str 0 1) "+")
-                    (exact->inexact (/ 
-                                        (b-dec base (string-append (parte_intera str) (parte_fraz str))) 
-                                        (expt (string-length base) (string-length (parte_fraz str)))
-                                    )
+                    (exact->inexact 
+                        (/ 
+                            (b-dec base (string-append (parte_intera str) (parte_fraz str))) 
+                            (expt (string-length base) (string-length (parte_fraz str)))
+                        )
                     )
                 )
                 ((string=? (substring str 0 1) "-")
