@@ -3,7 +3,7 @@
 
 Raccolta dei vari esercizi svolti durante le ore di laboratorio.  
 
-Testi degli esercizi --> [Link](https://users.dimi.uniud.it/~claudio.mirolo/teaching/programmazione/index.html)
+Testi degli esercizi --> [Link](https://users.dimi.uniud.it/~claudio.mirolo/teaching/programmazione/laboratory/laboratory.html)
    
 
    
